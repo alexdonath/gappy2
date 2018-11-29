@@ -60,7 +60,7 @@ python3 ~/bin/gappy2.py -h
 
 This will show all available options and parameters:
 
-```bash
+```
 usage: gappy2.py [-h] [-f FASTA] [-m MAF] [-o OUTPUT_PREFIX] [-l MINLENGTH]
                  [-u MAXLENGTH] [-s LENGTH] [-c CHAR] [-z] [-v]
 
@@ -125,7 +125,7 @@ Application of the fuzzy search mode will be indicated by an additional `_z`.
 
 An example alignment is provided in the `example/` directory which looks like this:
 
-```bash
+```
 >sequence_1
 AAAAA--AAAAAAA-AAAAAAAA-----A
 >sequence_2
@@ -202,7 +202,7 @@ and a file `GAPPY2_example.fasta_2-inf_z.tsv`:
 1       23      28      sequence_1,sequence_3   5
 ```
 
-Note that the `?` appears in the third site of sequence `g`. This is because the sequence contains unknown characters at the sites where the splid in sequences `a` and `c` has been identified.
+Note that the `?` appears in the third site of `sequence_7`. This is because the sequence contains unknown characters at the sites where the splid in `sequences_1` and `sequence_3` has been identified.
 
 ## Benchmarking/Resources
 
