@@ -60,7 +60,7 @@ python3 ~/bin/gappy2.py -h
 
 This will show all available options and parameters:
 
-```
+```txt
 usage: gappy2.py [-h] [-f FASTA] [-m MAF] [-o OUTPUT_PREFIX] [-l MINLENGTH]
                  [-u MAXLENGTH] [-s LENGTH] [-c CHAR] [-z] [-v]
 
@@ -125,7 +125,7 @@ Application of the fuzzy search mode will be indicated by an additional `_z`.
 
 An example alignment is provided in the `example/` directory which looks like this:
 
-```
+```txt
 >sequence_1
 AAAAA--AAAAAAA-AAAAAAAA-----A
 >sequence_2
@@ -215,6 +215,12 @@ Both tests were run on a Intel(R) Core(TM) i7-4770 CPU @ 3.40GHz with 8 GB RAM.
 * **Version 0.1.0**
 
   Initial release of gappy2.
+
+## Citation
+
+If you find gappy2 useful for your research, please consider citing it:
+
+Donath A., Stadler P.F. 2018. Split-inducing indels in phylogenomic analysis. *Algorithms for Molecular Biology*. 13:12. doi:[10.1186/s13015-018-0130-7](https://doi.org/10.1186/s13015-018-0130-7).
 
 ## License
 
