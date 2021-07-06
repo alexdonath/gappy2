@@ -10,7 +10,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-gappy2 needs **Python 3.6.6** or later (earlier Python 3.x versions might work but haven't been tested), **BioPython version 1.72** or later (earlier versions >= 1.69 might work but haven't been tested), and the **intervaltree library** by Chaim-Leib Halbert and Konstantin Tretyakov.
+gappy2 requires **Python 3.6.6** or later (earlier Python 3.x versions might work but haven't been tested), **BioPython version 1.72** or later (earlier versions >= 1.69 might work but haven't been tested), and the **intervaltree library** (>= version 3.0.0) by Chaim-Leib Halbert and Konstantin Tretyakov.
 
 The easiest way to set up Python is to install the Anaconda Python distribution:
 
@@ -20,7 +20,7 @@ The easiest way to set up Python is to install the Anaconda Python distribution:
 
    If you don't want to install Anaconda, you can install Python 3 using your preferred method. In this case, make sure you install the following two dependencies as well.
 
-* [BioPython 1.72](https://www.biopython.org)
+* [BioPython >= 1.72](https://www.biopython.org)
 
    The BioPython package can be obtained from [anaconda.com](http://docs.anaconda.com/anaconda/packages/pkg-docs/). Simply use the terminal or an anaconda prompt and type:
 
@@ -30,12 +30,12 @@ The easiest way to set up Python is to install the Anaconda Python distribution:
 
    This should install the latest BioPython version.
 
-* [intervaltree 2.1.0](https://github.com/chaimleib/intervaltree)
+* [intervaltree >= 3.0.0](https://github.com/chaimleib/intervaltree)
 
-   The intervaltree package is distributed by various organizations through the [anaconda cloud](https://anaconda.org/search?q=intervaltree). I chose to use the one distributed by [conda-forge](https://conda-forge.org/) but others should work as well. Again, use the terminal or an anaconda prompt and type:
+   I chose to use the intervaltree package distributed by [PyPI](https://pypi.org/project/intervaltree/). Again, use the terminal or an anaconda prompt and type:
 
    ```bash
-   conda install -c conda-forge intervaltree
+   pip install intervaltree
    ```
 
    This should install the latest version of the intervaltree package.
@@ -211,6 +211,10 @@ Checking 3,846 alignments in a single `MAF` file took 4.5 minutes and 90 MB of R
 Both tests were run on a Intel(R) Core(TM) i7-4770 CPU @ 3.40GHz with 8 GB RAM.
 
 ## Release History
+
+* **Version 0.1.1**
+
+  Works now with intervaltree >= 3.0.0
 
 * **Version 0.1.0**
 

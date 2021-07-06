@@ -121,8 +121,8 @@ def identify_candidates(tree):
 
     for gap in gaps:
         # print(gap)
-        overlaps = tree.search(gap.begin, gap.end)
-
+#        overlaps = tree.search()
+        overlaps = tree.overlap(gap.begin, gap.end)
         for overlap in overlaps:
             # print(gap, "versus", overlap)
             if gap == overlap:
@@ -153,7 +153,7 @@ def identify_splids(tree):
     conflicts = set()
 
     for candidate in candidates:
-        overlaps = tree.search(candidate.begin, candidate.end)
+        overlaps = tree.overlap(candidate.begin, candidate.end)
 
         for overlap in overlaps:
             # print(overlap, "versus", candidate)
@@ -222,7 +222,7 @@ def create_splid_alignment(alignment, final_list, unknowntree, count):
 
         # overlap with unknownchar
         [start, stop] = [int(x) for x in i.split("-")]
-        unknown_overlap = unknowntree.search(start, stop)
+        unknown_overlap = unknowntree.overlap(start, stop)
         unknownseqs = []
         for region in unknown_overlap:
             unknownseqs.append(region.data)
@@ -287,7 +287,7 @@ def print_version():
         with open(os.path.join(ROOT_DIR, 'VERSION')) as version_file:
             version = version_file.read().strip()
     except FileNotFoundError:
-        version = "0.1.0"
+        version = "0.1.1"
 
     print(version)
 
